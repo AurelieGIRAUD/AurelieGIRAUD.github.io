@@ -24,6 +24,7 @@ The next ones are concerning the residual:
 
 2. Normality:
 Residuals must be Normally distributed (i.e variance tend to 1 and mean tend to zero). This is necessary for a range of statistical tests, such as the t-test. We can relax this assumption in large samples due to the central limit theorem.
+<img src="Screenshot 2022-10-21 at 18.19.12.png"/>
 
 3. Homoscedasticity:
 Means that the residuals have constant variance no matter the level of the dependent variable.
