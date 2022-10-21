@@ -12,7 +12,7 @@ The logic and method are detailled in the following article: https://towardsdata
 The dataset can be found here: https://www.kaggle.com/fayejavad/marketing-linear-multiple-regression
 It describes the advertising experiment between Social Media Budget and Sales (in Thousands $ ) and hold 200 experiments.
 
-## The 4 peace keeper
+## The 4 main assumptions to verify
 
 There are four principal assumptions which support using a linear regression model for the purpose of inference or prediction:
 
