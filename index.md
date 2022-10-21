@@ -17,7 +17,7 @@
 
 ---
 ---
-[Predict Marketing Sales with Multiple Linear Regression](https://github.com/AurelieGIRAUD/Data_Science_Projects/blob/main/Linear_Regression/Application_Linear_Model.ipynb)
+[Predict Marketing Sales with Multiple Linear Regression]([https://github.com/AurelieGIRAUD/Data_Science_Projects/blob/main/Linear_Regression])
  <br> <br>
 <img src="images/Linear.jpg"/>
 
