@@ -14,7 +14,7 @@ description: > # your text below (remove <br> elements if you don't need line br
   Writing articles and blog posts are one of my favorite way to reinforce my learning process and share my passion. 
   <br><br>
   <a href="https://www.linkedin.com/in/aureliegiraud9000/">View My LinkedIn Profile</a> 
-  <br>
+  <br><br>
   <a href="https://medium.com/@agiraud">View My Medium Blog</a> 
   
 theme: jekyll-theme-minimal
