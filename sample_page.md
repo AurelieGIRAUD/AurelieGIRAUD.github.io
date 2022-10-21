@@ -39,8 +39,10 @@ For multiple linear regression, you also need to check:
 5. the Absence of multicollinearity:
 Multicollinearity refers to when two predictors (or more) are providing the same information about the response variable. This can be a problem for the model as it generates:
 
-Redundancy → leading to unreliable coefficients of the predictors (especially for linear models)
-High variance of the estimator → tends to overfit meaning that the algorithm tends to model the random noise in the training data, rather than the intended output.
-An important predictor can become unimportant.
+- Redundancy → leading to unreliable coefficients of the predictors (especially for linear models)
+
+- High variance of the estimator → tends to overfit meaning that the algorithm tends to model the random noise in the training data, rather than the intended output.
+
+- An important predictor can become unimportant.
 
 
