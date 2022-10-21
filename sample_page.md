@@ -11,7 +11,7 @@ The repository describes how to apply a Multiple Linear Regression Model using S
 
 ## Context
 
-Most firms that think they want advanced AI/ML really just need linear regression on cleaned-up data [Robin Hanson]
+_Most firms that think they want advanced AI/ML really just need linear regression on cleaned-up data._ [Robin Hanson]
 
 There are four principal assumptions which support using a linear regression model for the purpose of inference or prediction:
 
