@@ -18,7 +18,7 @@ There are four principal assumptions which support using a linear regression mod
 
 1. Linearity: 
 We must have a linear relationship between our features and responses. This is required for our estimator and predictions to be unbiased.
-<img src="images/Linear.jpg"/>
+<img src="images/Screenshot 2022-10-21 at 18.18.50.png"/>
 
 The next ones are concerning the residual:
 
