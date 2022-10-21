@@ -1,4 +1,4 @@
-# Multiple Linear_Regression applied to a Marketing Case Study
+# Multiple Linear Regression applied to a Marketing Case Study
 
 #### 📉 Dataset
 
