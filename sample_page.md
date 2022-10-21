@@ -32,6 +32,7 @@ Means that the residuals have constant variance no matter the level of the depen
 
 4. Independence:
 Residuals must be totally free of autocorrelation.
+<img src="Screenshot 2022-10-21 at 18.19.24.png"/>
 
 
 ## The 5th trouble maker
