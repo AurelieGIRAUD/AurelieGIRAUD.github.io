@@ -8,7 +8,7 @@
 <img src="images/dummy_thumbnail.jpg?raw=true"/>
 
 ---
-[Customer Segmentation with Clustering Algorithm](https://github.com/AurelieGIRAUD/Data_Science_Projects/tree/main/Clustering))
+[Customer Segmentation with Clustering Algorithm](https://github.com/AurelieGIRAUD/Data_Science_Projects/tree/main/Clustering)
 <img src="images/dummy_thumbnail.jpg?raw=true"/>
 
 ---
