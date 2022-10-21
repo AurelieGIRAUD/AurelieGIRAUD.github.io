@@ -2,20 +2,23 @@
 
 ---
 
-### Category Name 1 
+### Machine Learning Applications
 
-[Project 1 Title](/sample_page)
+[Fraud Detection with Logistic Regression Model](https://github.com/AurelieGIRAUD/Data_Science_Projects/tree/main/Logistic_Regression)
 <img src="images/dummy_thumbnail.jpg?raw=true"/>
 
 ---
-[Project 2 Title](/pdf/sample_presentation.pdf)
+[Customer Segmentation with Clustering Algorithm]([/pdf/sample_presentation.pdf](https://github.com/AurelieGIRAUD/Data_Science_Projects/tree/main/Clustering))
 <img src="images/dummy_thumbnail.jpg?raw=true"/>
 
 ---
-[Project 3 Title](http://example.com/)
+[Revenue Prediction with ANOVA]([http://example.com/]](https://github.com/AurelieGIRAUD/Data_Science_Projects/tree/main/ANOVA)
 <img src="images/dummy_thumbnail.jpg?raw=true"/>
 
 ---
+---
+[Revenue Prediction with Multiple Linear Regression](https://github.com/AurelieGIRAUD/Data_Science_Projects/blob/main/Linear_Regression/Application_Linear_Model.ipynb)
+<img src="images/dummy_thumbnail.jpg?raw=true"/>
 
 ### Category Name 2
 
