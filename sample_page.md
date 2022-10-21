@@ -29,6 +29,19 @@ Residuals must be Normally distributed (i.e variance tend to 1 and mean tend to 
 3. Homoscedasticity:
 Means that the residuals have constant variance no matter the level of the dependent variable.
 
+```python
+import statsmodels.stats.api as sms
+from statsmodels.compat import lzip
+name = ['Lagrange multiplier statistic', 'p-value',
+        'f-value', 'f p-value']
+test = sms.het_breuschpagan(reg_multi.resid, reg_multi.model.exog)
+lzip(name, test)
+>> [('Lagrange multiplier statistic', 4.231064027368323),
+ ('p-value', 0.12056912806125976),
+ ('f-value', 2.131148563286781),
+ ('f p-value', 0.12189895632865029)]
+```
+
 
 4. Independence:
 Residuals must be totally free of autocorrelation.
