@@ -18,7 +18,15 @@ There are four principal assumptions which support using a linear regression mod
 
 1. Linearity: 
 We must have a linear relationship between our features and responses. This is required for our estimator and predictions to be unbiased.
-<img src="images/Screenshot 2022-10-21 at 18.18.50.png"/>
+If you try to fit a linear model to data which is nonlinearly or nonadditive, your predictions are likely to be seriously in error, especially when you extrapolate beyond the range of the sample data. To confirm the linearity, we can for example, apply the Harvey-Collier multiplier test.
+
+```python
+import statsmodels.stats.api as sms
+sms.linear_harvey_collier(reg_multi)
+>> Ttest_1sampResult(statistic=-1.565945529686271, pvalue=0.1192542929871369)
+```
+
+A small p-value shows that there is a violation of linearity. Here the p-value is higher than the alpha risk (5%) meaning that the linearity condition is verified.
 
 The next ones are concerning the residual:
 
@@ -26,8 +34,12 @@ The next ones are concerning the residual:
 Residuals must be Normally distributed (i.e variance tend to 1 and mean tend to zero). This is necessary for a range of statistical tests, such as the t-test. We can relax this assumption in large samples due to the central limit theorem.
 <img src="images/Screenshot 2022-10-21 at 18.19.12.png"/>
 
+If the residuals are normally distributed, we should see a bell-shaped histogram centered on 0 and with a variance of 1.
+
+
 3. Homoscedasticity:
 Means that the residuals have constant variance no matter the level of the dependent variable.
+We can use for example, the Breush-Pagan test. This test measures how errors increase across the explanatory variable.
 
 ```python
 import statsmodels.stats.api as sms
@@ -42,6 +54,7 @@ lzip(name, test)
  ('f p-value', 0.12189895632865029)]
 ```
 
+If the test statistic has a p-value below the alpha risk (e.g. 0.05) then the null hypothesis of homoskedasticity is rejected and heteroskedasticity is assumed. In our case, we validate the assumption of homoscedasticity.
 
 4. Independence:
 Residuals must be totally free of autocorrelation.
