@@ -1,18 +1,17 @@
 # Multiple Linear_Regression applied to a Marketing Case Study
 
-## Context
-
-Most firms that think they want advanced AI/ML really just need linear regression on cleaned-up data [Robin Hanson]
-
-This repository describes how to apply a Multiple Linear Regression Model using Scipy and how to perform regression diagnosis to tackle uncertainties. 
-The logic and method are detailled in the following article: https://towardsdatascience.com/perform-regression-diagnostics-and-tackle-uncertainties-of-linear-models-1372a03b1f56 
-
-## Dataset
+## 📉 Dataset
 
 The dataset can be found here: https://www.kaggle.com/fayejavad/marketing-linear-multiple-regression
 It describes the advertising experiment between Social Media Budget and Sales (in Thousands $ ) and hold 200 experiments.
 
-## The 4 main assumptions to verify
+## 📒 Repository
+The repository describes how to apply a Multiple Linear Regression Model using Scipy and how to perform regression diagnosis to tackle uncertainties: https://github.com/AurelieGIRAUD/Data_Science_Projects/tree/main/Linear_Regression
+
+
+## Context
+
+Most firms that think they want advanced AI/ML really just need linear regression on cleaned-up data [Robin Hanson]
 
 There are four principal assumptions which support using a linear regression model for the purpose of inference or prediction:
 
@@ -79,5 +78,22 @@ In other words,multicollinearity makes some variables statistically insignifican
 We can check the existence of collinearity between two or more variables with the Variance Inflation Factor (VIF). It’s a measure of colinearity among predictor variables within a multiple regression.
 
 We generally consider that a VIF of 5 or 10 and above (depends on the business problem) indicates a multicollinearity problem.
+
+```python
+from statsmodels.stats.outliers_influence import variance_inflation_factor
+from statsmodels.tools.tools import add_constant
+# For each X, calculate VIF and save in dataframe
+df.drop(['sales'],axis=1,inplace=True)
+X = add_constant(df)
+vif = pd.DataFrame()
+vif["VIF Factor"] = [variance_inflation_factor(X.values, i) for i in range(X.shape[1])]
+vif["features"] = X.columns
+vif.round(1) #inspect results
+```
+
+
+
+
+
 
 
