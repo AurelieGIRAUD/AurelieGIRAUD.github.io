@@ -1,31 +1,33 @@
-## This can be your internal website page / project page
+# Multiple Linear_Regression applied to a Marketing Case Study
 
-**Project description:** Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+## Context
 
-### 1. Suggest hypotheses about the causes of observed phenomena
+Most firms that think they want advanced AI/ML really just need linear regression on cleaned-up data [Robin Hanson]
 
-Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
+This repository describes how to apply a Multiple Linear Regression Model using Scipy and how to perform regression diagnosis to tackle uncertainties. 
+The logic and method are detailled in the following article: https://towardsdatascience.com/perform-regression-diagnostics-and-tackle-uncertainties-of-linear-models-1372a03b1f56 
 
-```javascript
-if (isAwesome){
-  return true
-}
-```
+## Dataset
 
-### 2. Assess assumptions on which statistical inference will be based
+The dataset can be found here: https://www.kaggle.com/fayejavad/marketing-linear-multiple-regression
+It describes the advertising experiment between Social Media Budget and Sales (in Thousands $ ) and hold 200 experiments.
 
-```javascript
-if (isAwesome){
-  return true
-}
-```
+## The 4 peace keeper
 
-### 3. Support the selection of appropriate statistical tools and techniques
+There are four principal assumptions which support using a linear regression model for the purpose of inference or prediction:
 
-<img src="images/dummy_thumbnail.jpg?raw=true"/>
+1. Linearity: 
+We must have a linear relationship between our features and responses. This is required for our estimator and predictions to be unbiased.
 
-### 4. Provide a basis for further data collection through surveys or experiments
+The next ones are concerning the residual:
 
-Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
+2. Normality:
+Residuals must be Normally distributed (i.e variance tend to 1 and mean tend to zero). This is necessary for a range of statistical tests, such as the t-test. We can relax this assumption in large samples due to the central limit theorem.
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+3. Homoscedasticity:
+Means that the residuals have constant variance no matter the level of the dependent variable.
+
+
+4. Independence:
+Residuals must be totally free of autocorrelation.
+
