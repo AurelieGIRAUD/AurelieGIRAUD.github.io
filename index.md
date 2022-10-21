@@ -8,11 +8,11 @@
 <img src="images/dummy_thumbnail.jpg?raw=true"/>
 
 ---
-[Customer Segmentation with Clustering Algorithm]([/pdf/sample_presentation.pdf](https://github.com/AurelieGIRAUD/Data_Science_Projects/tree/main/Clustering))
+[Customer Segmentation with Clustering Algorithm](https://github.com/AurelieGIRAUD/Data_Science_Projects/tree/main/Clustering))
 <img src="images/dummy_thumbnail.jpg?raw=true"/>
 
 ---
-[Revenue Prediction with ANOVA]([http://example.com/]](https://github.com/AurelieGIRAUD/Data_Science_Projects/tree/main/ANOVA)
+[Revenue Prediction with ANOVA](https://github.com/AurelieGIRAUD/Data_Science_Projects/tree/main/ANOVA)
 <img src="images/dummy_thumbnail.jpg?raw=true"/>
 
 ---
