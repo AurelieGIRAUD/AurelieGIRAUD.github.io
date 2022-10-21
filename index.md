@@ -18,7 +18,7 @@
 ---
 ---
 [Revenue Prediction with Multiple Linear Regression](https://github.com/AurelieGIRAUD/Data_Science_Projects/blob/main/Linear_Regression/Application_Linear_Model.ipynb)
-<img src="images/dummy_thumbnail.jpg?raw=true"/>
+<img src="images/Screenshot 2022-10-21 at 18.11.41.png"/>
 
 ### Category Name 2
 
