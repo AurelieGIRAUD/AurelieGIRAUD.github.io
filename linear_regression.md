@@ -75,7 +75,7 @@ For multiple linear regression, you also need to check the absence of multicolli
 
 - An important predictor can become unimportant.
 
-In other words,multicollinearity makes some variables statistically insignificant when they should be significant.
+In other words, multicollinearity makes some variables statistically insignificant when they should be significant.
 We can check the existence of collinearity between two or more variables with the Variance Inflation Factor (VIF). It’s a measure of colinearity among predictor variables within a multiple regression.
 
 We generally consider that a VIF of 5 or 10 and above (depends on the business problem) indicates a multicollinearity problem.
