@@ -1,11 +1,11 @@
 # Multiple Linear_Regression applied to a Marketing Case Study
 
-## 📉 Dataset
+### 📉 Dataset
 
 The dataset can be found here: https://www.kaggle.com/fayejavad/marketing-linear-multiple-regression
 It describes the advertising experiment between Social Media Budget and Sales (in Thousands $ ) and hold 200 experiments.
 
-## 📒 Repository
+### 📒 Repository
 The repository describes how to apply a Multiple Linear Regression Model using Scipy and how to perform regression diagnosis to tackle uncertainties: https://github.com/AurelieGIRAUD/Data_Science_Projects/tree/main/Linear_Regression
 
 
