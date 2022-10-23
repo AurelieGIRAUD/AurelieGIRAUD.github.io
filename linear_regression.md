@@ -2,7 +2,7 @@
 
 ### ✅ Business Case
 
-In this project, we are trying to predict sales revenues based on the budget invested into social media - Youtube, Facebook and some newspapers, using a multiple linear regression. The main focus of this project is to display how to validate the key assumptions of such a model. 
+In this project, we are trying to predict sales revenues based on the budget invested into social media - Youtube, Facebook and some newspapers, using a multiple linear regression. The main focus of this project is to display how to validate the key assumptions of such a model. Get the full experience on my [blog](https://medium.com/towards-data-science/perform-regression-diagnostics-and-tackle-uncertainties-of-linear-models-1372a03b1f56).
 
 ### 📉 Dataset
 
