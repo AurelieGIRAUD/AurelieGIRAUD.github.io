@@ -4,7 +4,7 @@
 
 ### Machine Learning Applications
 
-[Fraud Detection with Logistic Regression Model](https://github.com/AurelieGIRAUD/Data_Science_Projects/tree/main/Logistic_Regression)
+[Fraud Detection with Logistic Regression Model](/logistic_regression)
 <img src="images/dummy_thumbnail.jpg?raw=true"/>
 
 ---
