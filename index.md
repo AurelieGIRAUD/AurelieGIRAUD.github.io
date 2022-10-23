@@ -5,15 +5,12 @@
 ### Machine Learning Applications
 
 [Fraud Detection with Logistic Regression Model](/logistic_regression)
-<img src="images/dummy_thumbnail.jpg?raw=true"/>
 
 ---
 [Customer Segmentation with Clustering Algorithm](https://github.com/AurelieGIRAUD/Data_Science_Projects/tree/main/Clustering)
-<img src="images/dummy_thumbnail.jpg?raw=true"/>
 
 ---
 [Revenue Prediction with ANOVA](https://github.com/AurelieGIRAUD/Data_Science_Projects/tree/main/ANOVA)
-<img src="images/dummy_thumbnail.jpg?raw=true"/>
 
 ---
 ---
