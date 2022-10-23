@@ -7,7 +7,6 @@ In this project, we are trying to predict sales revenues based on the budget inv
 ### 📉 Dataset
 
 The dataset can be found on [Kaggle](https://www.kaggle.com/fayejavad/marketing-linear-multiple-regression).
-
 It describes the advertising experiment between Social Media Budget and Sales (in Thousands $ ) and hold 200 experiments.
 
 ### 📒 Repository
