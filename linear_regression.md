@@ -20,7 +20,7 @@ _Most firms that think they want advanced AI/ML really just need linear regressi
 
 There are four principal assumptions which support using a linear regression model for the purpose of inference or prediction:
 
-### 1. Linearity: 
+#### 1. Linearity: 
 We must have a linear relationship between our features and responses. This is required for our estimator and predictions to be unbiased.
 If you try to fit a linear model to data which is nonlinearly or nonadditive, your predictions are likely to be seriously in error, especially when you extrapolate beyond the range of the sample data. To confirm the linearity, we can for example, apply the Harvey-Collier multiplier test.
 
@@ -34,7 +34,7 @@ sms.linear_harvey_collier(reg_multi)
 
 The next ones are concerning the residuals:
 
-### 2. Normality:
+#### 2. Normality:
 Residuals must be Normally distributed (i.e variance tend to 1 and mean tend to zero). This is necessary for a range of statistical tests, such as the t-test. We can relax this assumption in large samples due to the central limit theorem.
 
 
@@ -43,7 +43,7 @@ Residuals must be Normally distributed (i.e variance tend to 1 and mean tend to 
 ✅ If the residuals are normally distributed, we should see a bell-shaped histogram centered on 0 and with a variance of 1.
 
 
-### 3. Homoscedasticity:
+#### 3. Homoscedasticity:
 Means that the residuals have constant variance no matter the level of the dependent variable.
 We can use for example, the Breush-Pagan test. This test measures how errors increase across the explanatory variable.
 
@@ -62,14 +62,14 @@ lzip(name, test)
 
 ✅ If the test statistic has a p-value below the alpha risk (e.g. 0.05) then the null hypothesis of homoskedasticity is rejected and heteroskedasticity is assumed. In our case, we validate the assumption of homoscedasticity.
 
-### 4. Independence:
+#### 4. Independence:
 Residuals must be totally free of autocorrelation.
 
 
 <img src="images/Screenshot 2022-10-21 at 18.19.24.png"/>
 
 
-### 5. (...) And Multicollinearity
+#### 5. (...) And Multicollinearity
 
 For multiple linear regression, you also need to check the absence of multicollinearity. Multicollinearity refers to when two predictors (or more) are providing the same information about the response variable. This can be a problem for the model as it generates:
 
