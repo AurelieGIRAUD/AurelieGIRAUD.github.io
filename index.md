@@ -17,7 +17,7 @@
 
 ---
 ---
-[Predict Marketing Sales with Multiple Linear Regression](/linear_regression)
+[Multiple Linear Regression applied to a Marketing Case Study](/linear_regression)
  <br> <br>
 <img src="images/Linear.jpg"/>
 
