@@ -1,5 +1,9 @@
 # Multiple Linear Regression applied to a Marketing Case Study
 
+### ✅ Business Case
+
+In this project, we are trying to predict sales revenues based on the budget invested into social media - Youtube, Facebook and some newspapers, using a multiple linear regression. The main focus of this project is to display how to validate the key assumptions of such a model. 
+
 #### 📉 Dataset
 
 The dataset can be found on [Kaggle](https://www.kaggle.com/fayejavad/marketing-linear-multiple-regression).
