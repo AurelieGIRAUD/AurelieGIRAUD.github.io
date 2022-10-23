@@ -14,7 +14,7 @@ It describes the advertising experiment between Social Media Budget and Sales (i
 The repository is available on [GitHub](https://github.com/AurelieGIRAUD/Data_Science_Projects/tree/main/Linear_Regression). It describes how to apply a Multiple Linear Regression Model using Scipy and how to perform regression diagnosis to validate the model.
 
 
-## Key take-away
+### 🎯 Key take-away
 
 _Most firms that think they want advanced AI/ML really just need linear regression on cleaned-up data._ [Robin Hanson]
 
@@ -69,7 +69,7 @@ Residuals must be totally free of autocorrelation.
 <img src="images/Screenshot 2022-10-21 at 18.19.24.png"/>
 
 
-## The 5th trouble maker
+### 5. (...) And Multicollinearity
 
 For multiple linear regression, you also need to check the absence of multicollinearity. Multicollinearity refers to when two predictors (or more) are providing the same information about the response variable. This can be a problem for the model as it generates:
 
