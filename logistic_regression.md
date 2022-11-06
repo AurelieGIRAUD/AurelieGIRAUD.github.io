@@ -56,13 +56,11 @@ def lorenz_curve(X):
 
 The Gini index represents the area between the Lorenz curve and the first bisector line. It is a good metric to summarize the information from the Lorenz curve.
 
+<img src="Screenshot 2022-11-06 at 21.16.32.png"/>
 
-The smallest the Gini Index The least inequalities in the Country. Here we see:
 
-Denmark and Iceland are the countries with the least inequalities among the selection of countries. In 2011, they tend to have more or less the same index. The Index increase slightly in Denmark between 2008 and 2011 and while it decreased strongly in Iceland.
-Georgia and Turkey have in 2011 an index about 1.5 time bigger than the index of Denmark and Iceland. The index stayed relatively stable since 2007.
-Argentina is the country with the biggest inequalities in terms of income among its population. Its index is the highest of the selection. However, we can see that it tends to decrease since 2004 and is almost at the same level of Georgia and Turkey in 2011.
-We are now looking at all the countries in the World and ranking them by gini index ascending so from the country with the less inequality of incomes to the country with the biggest inequalities
+✅ The smallest the Gini Index, the least inequalities in the given country. 
+In our example, we can see that Denmark and Iceland are the countries with the least inequalities. 
   
 
   
