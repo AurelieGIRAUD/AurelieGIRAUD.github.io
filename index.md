@@ -11,6 +11,8 @@
 
 ---
 [Revenue Prediction with ANOVA](https://github.com/AurelieGIRAUD/Data_Science_Projects/tree/main/ANOVA)
+ <br> <br>
+<img src="images/anova.jpg"/>
 
 ---
 ---
