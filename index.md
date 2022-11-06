@@ -18,7 +18,7 @@
 ---
 [Multiple Linear Regression applied to a Marketing Case Study](/linear_regression)
  <br> <br>
-<img src="images/Linear.jpg"/>
+<img src="images/linear.jpg"/>
 
 ### Category Name 2
 
