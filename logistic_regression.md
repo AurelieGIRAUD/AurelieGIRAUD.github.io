@@ -34,13 +34,17 @@ The repository is available on [GitHub](https://github.com/AurelieGIRAUD/Data_Sc
 
 ### 🎯 Key take-away
 
-We start the analytic by highlighting the diversity of income across a selection of 5 countries and using the Lorenz curve and Gini Index.
+We start the analytic by evaluating the diversity of income across a selection of 5 countries, using the Lorenz curve and Gini Index. The following distribution highlight the broad range of incomes among the selection:
 
-<img src="images/Screenshot 2022-10-21 at 18.19.12.png"/>
+<img src="images/Screenshot 2022-11-06 at 21.05.43.png"/>
 
 1. Lorenz curve
 
 ```python
+def lorenz_curve(X):
+    lorenz = np.cumsum(np.sort(X['income'])) / X['income'].sum()
+    lorenz = np.append([0],lorenz) 
+``` 
 3. Gini Index
 
   
