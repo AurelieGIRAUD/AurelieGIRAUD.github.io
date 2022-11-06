@@ -48,7 +48,7 @@ def lorenz_curve(X):
     lorenz = np.append([0],lorenz) 
 ``` 
 
-<img src="Screenshot 2022-11-06 at 21.11.18.png"/>
+<img src="images/Screenshot 2022-11-06 at 21.11.18.png"/>
 
 ✅ The furthest the Lorenz curve is from the first bisector line, the more inequalities of revenue in the given country. We can see here that there are more inequalities in Argentina than in Denmark.
 
@@ -56,11 +56,11 @@ def lorenz_curve(X):
 
 The Gini index represents the area between the Lorenz curve and the first bisector line. It is a good metric to summarize the information from the Lorenz curve.
 
-<img src="Screenshot 2022-11-06 at 21.16.32.png"/>
+<img src="images/Screenshot 2022-11-06 at 21.16.32.png"/>
 
 
 ✅ The smallest the Gini Index, the least inequalities in the given country. 
-In our example, we can see that Denmark and Iceland are the countries with the least inequalities. 
+In our example, we can see that Denmark and Iceland are the countries with the least inequalities in our given selection. 
   
 
   
