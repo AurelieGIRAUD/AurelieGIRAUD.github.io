@@ -48,7 +48,7 @@ def lorenz_curve(X):
     lorenz = np.append([0],lorenz) 
 ``` 
 
-<img src="images/Screenshot 2022-11-06 at 21.11.18.png"/>
+<img src="images/rsz_screenshot_2022-11-06_at_211118.png"/>
 
 ✅ The furthest the Lorenz curve is from the first bisector line, the more inequalities of revenue in the given country. We can see here that there are more inequalities in Argentina than in Denmark.
 
