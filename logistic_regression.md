@@ -56,7 +56,7 @@ def lorenz_curve(X):
 
 The Gini index represents the area between the Lorenz curve and the first bisector line. It is a good metric to summarize the information from the Lorenz curve.
 
-<img src="images/rsz_1screenshot_2022-11-06_at_211632.png"/>
+<img src="images/rsz_11screenshot_2022-11-06_at_211632.png"/>
 
 
 ✅ The smallest the Gini Index, the least inequalities in the given country. 
