@@ -38,7 +38,7 @@ The repository is available on [GitHub](https://github.com/AurelieGIRAUD/Data_Sc
 
 **We start the analytics by evaluating the diversity of income across a selection of 5 countries, using the Lorenz curve and Gini Index.** 
 
-1. Income 
+1. Log-Income 
 
 Before to start we need to perform a log-transformation of the variable income because the distribution highly skewed to the right - meaning that there are some very high incomes. The transformation allows the distribution to follow a bell shape a.k.a Gaussian-like distribution.
 
@@ -88,7 +88,7 @@ We suppose here that we associate with each individual a unique class regardless
 ANOVA is applied in this project to verify the effect of a qualitative variable (country's name) on a quantitative variable (income). 
 There are certain assumptions that needs to be verified for ANOVA model:
 
-**1. NORMALITY**
+##### 1. NORMALITY
 
 The assumption of normality is tested on the residuals of the model. It can be verified using histograms and Q-Q plot, or using statistical tests such as Shapiro-Wilk or Anderson & Darling. The violations of normality, continuing with ANOVA is generally ok if you have a large sample size.
 
@@ -114,7 +114,7 @@ st.anderson(model2.resid,dist='norm')
 ✅ The statistic value is largely above any of the critical values, meaning that we are in the zone where H0 can be rejected. The residuals are not following a Normal distribution. 
 
 
-**2. HOMOGENEITY of variance**
+##### 2. HOMOGENEITY
 
 The assumption of homogeneity of variance is an assumption of the independent samples t-test and ANOVA stating that all comparison groups have the same variance. The independent samples t-test and ANOVA utilize the t and F statistics respectively, which are generally robust to violations of the assumption as long as group sizes are equal. Equal group sizes may be defined by the ratio of the largest to smallest group being less than 1.5 [source](https://www.statisticssolutions.com/the-assumption-of-homogeneity-of-variance/)
 
@@ -129,13 +129,17 @@ pg.homoscedasticity(df, dv='log_income', group='name',method='levene')
 Numerous investigations have examined the effects of variance heterogeneity on the empirical probability of a Type I error for the analysis of variance (ANOVA) F-test and the prevailing conclusion has been that when sample sizes are equal, the ANOVA is robust to variance heterogeneity. However, we should not assumed that the ANOVA F-test is always robust to variance heterogeneity when sample sizes are equal [source](https://doi.org/10.2307/1162346)
 In this case study, we do not have strictly the same size for each groups however the differences are very small (<< 1,5 between the largest and the smallest group), so we might consider our model robust to the violation of this assumption. Alternatively, there are two tests that we could run that are applicable when the assumption of homogeneity of variances has been violated: (1) Welch or (2) Brown and Forsythe test.
 
-**3. INDEPENDENCE**
+##### 3. INDEPENDENCE
 
-Independence of residual is commonly referred to as the total absence of autocorrelation. Even though uncorrelated data does not necessarily imply independence, one can check if random variables are independent if their mutual information tends to 0. We can use a Durbin and Watson test which calculates the Durbin-Watson statistic. The test will output values between 0 and 4. Here are how to interpret the results of the test:
+Independence of residuals is commonly referred to as the total absence of autocorrelation. Even though uncorrelated data does not necessarily imply independence, one can check if random variables are independent if their mutual information tends to 0. We can use a Durbin and Watson test which calculates the Durbin-Watson statistic. The test will output values between 0 and 4. Here are how to interpret the results of the test:
 
-_- The closer to 2, the more evidence for no autocorrelation._
-_- The closer to 0 the statistic, the more evidence for positive serial correlation._
-_- The closer to 4, the more evidence for negative serial correlation._
+- The closer to 2, the more evidence for no autocorrelation.
+
+
+- The closer to 0 the statistic, the more evidence for positive serial correlation.
+
+
+- The closer to 4, the more evidence for negative serial correlation.
 
 ```python
 df.durbin_watson(model2bis.resid, axis=0)
