@@ -75,6 +75,11 @@ We only lack now the income class of an individual's parents to move forward int
 
 We suppose here that we associate with each individual a unique class regardless of the number of parents. We are going to simulate this information using a coefficient (specific to each country) measuring a correlation between the income of an individual and the income of its parents. This coefficient will be called the elasticity coefficient or relative IGM in income. It measures the intergenerational income mobility.
 
+✅ Here is an example of visualization for the country of Panama: the chart represent the conditionnal probability for a child to fall into the income class of its parents. We can see in that case, that the earnings of (adult) children are dependent on the income of their parents. It means, that a child born in a family with low revenue in Panama, has a higher probability to also have low revenue when he will be adult.
+
+<img src="images/rsz_1screenshot_2022-11-07_at_133611.png"/>
+
+
 
 
   
