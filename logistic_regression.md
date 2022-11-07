@@ -83,9 +83,37 @@ We suppose here that we associate with each individual a unique class regardless
 
 #### ANOVA
 
-ANOVA is applied to verify the effect of a qualitative variable (country's name) on a quantitative variable (income).
-Before to start we need to log-transform the variable income because the distribution highly skewed to the right - meaning that there are some very high incomes. 
+ANOVA is applied in this project to verify the effect of a qualitative variable (country's name) on a quantitative variable (income).
+Before to start we need to perform a log-transformation of the variable income because the distribution highly skewed to the right - meaning that there are some very high incomes. The transformation allows the distribution to follow a bell shape a.k.a Gaussian-like distribution.
 
+✅ Here is an example of the effect of the log-transformation on the distribution of income for a given country.
+
+<img src="rsz_income.jpg"/>
+
+There are certain assumptions we need to verify before to be able to apply the ANOVA:
+
+1. NORMALITY - The assumption of normality is tested on the residuals of the model. It can be verified using histograms and Q-Q plot, or using statistical tests such as Shapiro-Wilk. The violations of normality, continuing with ANOVA is generally ok if you have a large sample size.
+
+2. HOMOGENEITY of variance - Homogeneity means that the variance among the groups should be approximately equal. It can be tested using tests such as Levene’s test or the Brown-Forsythe Test. In general, with violations of homogeneity, the analysis is considered robust if you have equal-sized groups.
+
+3. INDEPENDENCE - The sample cases should be independent of each other.The observations are obtained independently and randomly from the population defined by the factor levels. It can be verified with ACF (autocorrelation function) plots and Durbin-Watson test. ANOVA is not robust to violations to the assumption of independence.
+
+
+
+
+
+#### Multiple Linear Regression
+
+The last linear model, based on the gini index, the log-average income and the parent's class, is the one providing the best performances to predict the income (log transformed): it explains 81% of the variances, meaning that only 19% remains unexplained and due to others factors ike fx. chance, efforts,...
+In this last model, we can also notice that the coefficient associated to the gini index is negative.
+
+R-squared is relatively good (about 70%) in this model. Adding the parent's class improve the global performances of the model AND using the log income AND using standardized data retrieved the best performances. 70% of the variance of the income can be explained by the independent variables and 30% remains explained by other factors not included in the model.
+
+The Gini index is relevant in this model. Its pvalue is below 5%. The coefficient associated to the gini index is positive - varying between 0,5 and 0,0002. For the record, the higher is the gini index the higher are the inequalities. So, in a linear regression problem, type y = ax+b where:
+
+y = log_income
+x = gini index
+if a > 0, it means that when gini index increases the child income increases even more rapidly. So, the models suggest that the more unequalitarian is the country, the more (some groups of) people benefit from the situation.
 
 
 Here are the hypothesis for the tests:
