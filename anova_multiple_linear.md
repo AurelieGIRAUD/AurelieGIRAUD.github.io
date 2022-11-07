@@ -1,8 +1,8 @@
-# Detect counterfeit banknotes with logistic regression
+# Revenue Prediction with ANOVA and Linear Regression.
 
 ### ✅ Business Case
 
-In this project, we attempt to create a model to 
+In this project, we attempt to create a model to target future relevant customers among the current portfolio using the revenue data of their parents.
 
 
 ### 📉 Dataset
@@ -13,18 +13,20 @@ The dataset is therefore provided by the platform as a part of the program.
 ### 📒 Repository
 The repository is available on [GitHub](https://github.com/AurelieGIRAUD/Data_Science_Projects/tree/main/Logistic_Regression). It describes how to apply a Logistic Regression Model using the following steps:
 
-1. Exploratory Data Analysis (EDA)
-  
+1. Collection & Exploration
 
-  
- 2. Principal Component Analysis (PCA)
-  
+In that step, we collect, summarize and discuss the relevance of the data collected for the modeling.
 
+
+2. Features Engineering
+
+Here we are applying conditional probabilities for segmenting the customer portfolio into class of revenues. 
+
+
+3. Modelling 
+
+Finally, using ANOVA-one way and a Multiple Linear Regressions model, we are attempting to predict the customer's revenues.  
   
- 3. Logistic Regression
-  
-  - Train and Apply a logistic regression model to detect fake banknotes using their dimensions.
-  - Performances Analysis.
 
 
 ### 🎯 Key take-away
