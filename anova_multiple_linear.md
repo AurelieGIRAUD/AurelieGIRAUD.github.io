@@ -40,7 +40,7 @@ Before to start we need to perform a log-transformation of the variable income b
 
 ✅ Here is an example of the effect of the log-transformation on the distribution of income for a given country.
 
-<img src="images/rsz_income.jpg"/>
+<img src="images/rsz_1income.jpg"/>
 
 2. Lorenz curve & Gini Index
 
