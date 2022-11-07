@@ -11,7 +11,7 @@ This project was completed as a part of the [Data Analyst nanodegree](https://op
 The dataset is therefore provided by the platform as a part of the program.
 
 ### 📒 Repository
-The repository is available on [GitHub](https://github.com/AurelieGIRAUD/Data_Science_Projects/tree/main/Logistic_Regression). It describes how to apply a Logistic Regression Model using the following steps:
+The repository is available on [GitHub](https://github.com/AurelieGIRAUD/Data_Science_Projects/tree/main/ANOVA). It describes how to apply ANOVA and Multiple Linear Regression Models using the following steps:
 
 1. Collection & Exploration
 
