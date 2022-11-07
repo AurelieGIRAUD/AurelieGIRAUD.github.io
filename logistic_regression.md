@@ -88,11 +88,36 @@ Before to start we need to perform a log-transformation of the variable income b
 
 ✅ Here is an example of the effect of the log-transformation on the distribution of income for a given country.
 
-<img src="rsz_income.jpg"/>
+<img src="images/rsz_income.jpg"/>
 
 There are certain assumptions we need to verify before to be able to apply the ANOVA:
 
-1. NORMALITY - The assumption of normality is tested on the residuals of the model. It can be verified using histograms and Q-Q plot, or using statistical tests such as Shapiro-Wilk. The violations of normality, continuing with ANOVA is generally ok if you have a large sample size.
+1. NORMALITY - The assumption of normality is tested on the residuals of the model. It can be verified using histograms and Q-Q plot, or using statistical tests such as Shapiro-Wilk or Anderson & Darling. The violations of normality, continuing with ANOVA is generally ok if you have a large sample size.
+
+
+<img src="images/rsz_screenshot_2022-11-07_at_143104.png"/>
+
+✅ Q-Q plot: The distribution is relatively close to a normal distribution but has some fat tails to the right and left and is slightly in S shape. 
+
+Because we have a sample size > 5000, the Shapiro test is actually not ideal (For N > 5000 the W test statistic is accurate but the p-value may not be). We can use the Anderson and Darling test or the non-parametric test Kolmogoriv and Smirnov.
+
+_Anderson & Darling Hypothesis:_
+
+_H0 = The sample is drawn from a population that follows a particular distribution, here the Normal distribution._
+_H1 = The sample is NOT drawn from a population that follows the Normal distribution._
+_If the returned statistic is larger than these critical values then for the corresponding significance level, the null hypothesis that the data come from the chosen distribution can be rejected._
+
+```python
+st.anderson(model2.resid,dist='norm')
+```
+
+```AndersonResult(statistic=10248.77901675459, critical_values=array([0.576, 0.656, 0.787, 0.918, 1.092]), significance_level=array([15. , 10. ,  5. ,  2.5,  1. ]))```
+
+✅ The statistic value is largely above any of the critical values, meaning that we are in the zone where H0 can be rejected. The residuals are not following a Normal distribution. 
+
+💥 The QQ-plot and the statisticals tests are not showing that the residuals are following a Normal Distribution. We can see in the boxplot below that a lot of countries have outliers values. These data points might contribute to the non-normal distribution. Let's see if we can improve the model AND be in the conditions of applications by removing the outliers.
+
+
 
 2. HOMOGENEITY of variance - Homogeneity means that the variance among the groups should be approximately equal. It can be tested using tests such as Levene’s test or the Brown-Forsythe Test. In general, with violations of homogeneity, the analysis is considered robust if you have equal-sized groups.
 
