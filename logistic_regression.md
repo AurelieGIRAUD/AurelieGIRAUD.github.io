@@ -37,7 +37,7 @@ The repository is available on [GitHub](https://github.com/AurelieGIRAUD/Data_Sc
 **We start the analytic by evaluating the diversity of income across a selection of 5 countries, using the Lorenz curve and Gini Index.** 
 The following distribution highlight the broad range of incomes among the selection:
 
-<img src="images/rsz_screenshot_2022-11-06_at_210543.png"/>
+<img src="images/rsz_1screenshot_2022-11-06_at_210543.png"/>
 
 1. Lorenz curve
 
