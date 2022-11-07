@@ -40,7 +40,8 @@ We start the analytic by evaluating the diversity of income across a selection o
 
 1. Lorenz curve
 
-The Lorenz concentration curve is a way to represent the distribution function of a variable X. It is used in particular in economics to measure inequalities in the possession of wealth. We will use it here to assess inequalities in terms of the distribution of incomes among the group of countries selected.
+The Lorenz concentration curve is a way to represent the distribution function of a variable X. It is used in particular in economics to measure inequalities in the possession of wealth. We will use it here to assess inequalities in terms of the distribution of incomes among the group of countries selected. The furthest the Lorenz curve is from the first bisector line, the more inequalities of revenue in the given country.
+
 
 ```python
 def lorenz_curve(X):
@@ -50,17 +51,17 @@ def lorenz_curve(X):
 
 <img src="images/rsz_screenshot_2022-11-06_at_211118.png"/>
 
-✅ The furthest the Lorenz curve is from the first bisector line, the more inequalities of revenue in the given country. We can see here that there are more inequalities in Argentina than in Denmark.
+✅ In the example above, we can see here that there are more inequalities in Argentina than in Denmark.
 
 3. Gini Index
 
-The Gini index represents the area between the Lorenz curve and the first bisector line. It is a good metric to summarize the information from the Lorenz curve.
+The Gini index represents the area between the Lorenz curve and the first bisector line. It is a good metric to summarize the information from the Lorenz curve. The smallest the Gini Index, the least inequalities in the given country. 
+
 
 <img src="images/rsz_11screenshot_2022-11-06_at_211632.png"/>
 
 
-✅ The smallest the Gini Index, the least inequalities in the given country. 
-In our example, we can see that Denmark and Iceland are the countries with the least inequalities in our given selection. 
+✅ In the example above, we can see that Denmark and Iceland are the countries with the least inequalities in our given selection. 
   
 
   
