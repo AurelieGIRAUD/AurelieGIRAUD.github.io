@@ -1,3 +1,33 @@
+# Detect counterfeit banknotes with logistic regression
+
+### ✅ Business Case
+
+In this project, we attempt to create a model to 
+
+
+### 📉 Dataset
+
+This project was completed as a part of the [Data Analyst nanodegree](https://openclassrooms.com/en/dashboard/paths) displayed by Openclassrooms. 
+The dataset is therefore provided by the platform as a part of the program.
+
+### 📒 Repository
+The repository is available on [GitHub](https://github.com/AurelieGIRAUD/Data_Science_Projects/tree/main/Logistic_Regression). It describes how to apply a Logistic Regression Model using the following steps:
+
+1. Exploratory Data Analysis (EDA)
+  
+
+  
+ 2. Principal Component Analysis (PCA)
+  
+
+  
+ 3. Logistic Regression
+  
+  - Train and Apply a logistic regression model to detect fake banknotes using their dimensions.
+  - Performances Analysis.
+
+
+### 🎯 Key take-away
 #### 1. Explanatory Variables
 
 **We start the analytics by evaluating the diversity of income across a selection of 5 countries, using the Lorenz curve and Gini Index.** 
