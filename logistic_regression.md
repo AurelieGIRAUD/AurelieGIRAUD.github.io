@@ -83,7 +83,7 @@ We suppose here that we associate with each individual a unique class regardless
 <img src="images/rsz_1screenshot_2022-11-07_at_133611.png"/>
 
 
-#### 2. Model 1: ANOVA
+#### 2. TEST Model 1: ANOVA
 
 ANOVA is applied in this project to verify the effect of a qualitative variable (country's name) on a quantitative variable (income). 
 There are certain assumptions that needs to be verified for ANOVA model:
@@ -155,14 +155,34 @@ df.durbin_watson(model2bis.resid, axis=0)
 Let's try to build another model based on multiple linear regression.
 
 
-#### 3. Model 2: Multiple Linear Regression
+#### 3. TEST Model 2: Multiple Linear Regression
 
-The model based on the gini index, the log-average income and the parent's class, is the one providing the best performances to predict the income: it explains 81% of the variances, meaning that only 19% remains unexplained and due to others factors ike fx. chance, efforts,...
+In this project we have tested different combination of the explanatory variables in order to find the best model. Ultimately, the model based on the gini index, the log-average income and the parent's class, is the one providing the best performances to predict the income. It explains 81% of the variances, meaning that only 19% remains unexplained and due to others factors ike fx. chance, efforts,...
 
+<img src="images/rsz_1screenshot_2022-11-07_at_150024.png"/>
 
+Similarly to the ANOVA we must verified the conditions of normality, homogeneity and independance for the linear model to be valid. In addition, we must observed a linear relationship between the dependent variables and the independent variable and ideally the absence of multicollinearity. 
 
+💥 We have previously established that the conditions of normality, homogeneity and independance were not respected. Let's describe further how to check the collinearity condition.
 
+We can check the existence of collinearity between two or more variables with the Variance Inflation Factor (VIF). It's a measure of colinearity among predictor variables within a multiple regression. A rule of thumb for interpreting the variance inflation factor:
 
-  
+- 1 = not correlated.
+- Between 1 and 5 = moderately correlated.
+- Greater than 5 = highly correlated.
 
-  
+The more VIF increases, the less reliable your regression results are going to be. In general, a VIF above 10 indicates high correlation and is cause for concern. Some authors suggest a more conservative level of 2.5 or above [source](https://www.statisticshowto.com/variance-inflation-factor/).
+
+``` python 
+# For each X, calculate VIF and save in dataframe
+x5 = add_constant(X5)
+
+vif = pd.DataFrame()
+vif["VIF Factor"] = [variance_inflation_factor(x5.values, i) for i in range(x5.shape[1])]
+vif["features"] = x5.columns
+vif.round(1) #inspect results
+```
+
+✅ The test revealed that there is no collinearity between the features of the model.
+
+➡️ All in all, the 2 models tested can not be fully trusted as they rely on non-verified conditions. Moving forward we could try to apply other types of regression models. More to discover [here](https://www.upgrad.com/blog/types-of-regression-models-in-machine-learning/#:~:text=Polynomial%20Regression%20is%20another%20one,by%20the%20n%2Dth%20degree.)
