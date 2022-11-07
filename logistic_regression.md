@@ -35,7 +35,9 @@ The repository is available on [GitHub](https://github.com/AurelieGIRAUD/Data_Sc
 ### 🎯 Key take-away
 
 **We start the analytic by evaluating the diversity of income across a selection of 5 countries, using the Lorenz curve and Gini Index.** 
-The following distribution highlight the broad range of incomes among the selection:
+
+
+✅ The following distribution highlight the broad range of incomes among the selection: the average income move from left to right (from low to high) depending on the country. Georgia and El Salvador are the 2 countries with the lowest average income in the given selection.
 
 <img src="images/rsz_1screenshot_2022-11-06_at_210543.png"/>
 
