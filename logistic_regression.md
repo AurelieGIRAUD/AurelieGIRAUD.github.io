@@ -34,6 +34,7 @@ The repository is available on [GitHub](https://github.com/AurelieGIRAUD/Data_Sc
 
 ### 🎯 Key take-away
 
+
 **We start the analytic by evaluating the diversity of income across a selection of 5 countries, using the Lorenz curve and Gini Index.** 
 
 
@@ -56,7 +57,7 @@ def lorenz_curve(X):
 
 ✅ In the example above, we can see here that there are more inequalities in Argentina than in Denmark.
 
-3. Gini Index
+2. Gini Index
 
 The Gini index represents the area between the Lorenz curve and the first bisector line. It is a good metric to summarize the information from the Lorenz curve. The smallest the Gini Index, the least inequalities in the given country. 
 
@@ -65,6 +66,17 @@ The Gini index represents the area between the Lorenz curve and the first bisect
 
 
 ✅ In the example above, we can see that Denmark and Iceland are the countries with the least inequalities in our given selection. 
+
+
+3. Conditionnal probabilities
+
+At that stage, we have two of the three desired explanatory variables: the average income and the gini index for each given country. 
+We only lack now the income class of an individual's parents to move forward into the prediction. The idea is to use this variable to predict the probability for an individual to fall into the same lass of income than its parents - this will bring us closer to predict the revenue of an individual.
+
+We suppose here that we associate with each individual a unique class regardless of the number of parents. We are going to simulate this information using a coefficient (specific to each country) measuring a correlation between the income of an individual and the income of its parents. This coefficient will be called the elasticity coefficient or relative IGM in income. It measures the intergenerational income mobility.
+
+
+
   
 
   
