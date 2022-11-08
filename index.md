@@ -12,7 +12,7 @@
 ---
 [Revenue Prediction with ANOVA](/anova_multiple_linear)
  <br> <br>
-<img src="images/anova.jpg"/>
+<img src="images/IMG_0272.JPG"/>
 
 ---
 ---
