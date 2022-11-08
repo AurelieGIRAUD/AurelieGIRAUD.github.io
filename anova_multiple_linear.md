@@ -2,7 +2,7 @@
 
 ### ✅ Business Case
 
-In this project, we attempt to create a model to target future relevant customers among the current portfolio using the revenue data of their parents.
+In this project, we attempt to create a model to target future relevant customers among the current portfolio of a bank and using the revenue data of their parents. Two approaches are tested: ANOVA one-way and Multiple Linear Regression.
 
 
 ### 📉 Dataset
@@ -15,17 +15,17 @@ The repository is available on [GitHub](https://github.com/AurelieGIRAUD/Data_Sc
 
 1. Collection & Exploration
 
-In that step, we collect, summarize and discuss the relevance of the data collected for the modeling.
+In that step, we collect, summarize and discuss the relevance of the data collected for the modeling. This step is critical to ensure the relevance of the model.
 
 
 2. Features Engineering
 
-Here we are applying conditional probabilities for segmenting the customer portfolio into class of revenues. 
+Here we are creating the relevant explanatory variables. For example, we use conditional probabilities to segment the portfolio into class of revenues and extract the likelihood of a customer (children) to fall into the same class of revenue than its parents. 
 
 
 3. Modelling 
 
-Finally, using ANOVA-one way and a Multiple Linear Regressions model, we are attempting to predict the customer's revenues.  
+Finally, we are attempting to predict the customer's revenues using ANOVA-one way and Multiple Linear Regressions models.
   
 
 
@@ -36,7 +36,7 @@ Finally, using ANOVA-one way and a Multiple Linear Regressions model, we are att
 
 1. Log-Income 
 
-Before to start we need to perform a log-transformation of the variable income because the distribution highly skewed to the right - meaning that there are some very high incomes. The transformation allows the distribution to follow a bell shape a.k.a Gaussian-like distribution.
+Before to start we need to perform a log-transformation of the variable income because the distribution highly skewed to the right - meaning that there are some very high incomes. The transformation allows the distribution to follow a bell shape a.k.a Gaussian-like distribution which is ideal for modelling.
 
 ✅ Here is an example of the effect of the log-transformation on the distribution of income for a given country.
 
@@ -67,7 +67,7 @@ The Gini index represents the area between the Lorenz curve and the first bisect
 ✅ In the example above, we can see that Denmark and Iceland are the countries with the least inequalities in our given selection. 
 
 
-3. Conditionnal probabilities
+3. Class of revenue
 
 At that stage, we have two of the three desired explanatory variables: the average income and the gini index for each given country. 
 We only lack now the income class of an individual's parents to move forward into the prediction. The idea is to use this variable to predict the probability for an individual to fall into the same class of income than its parents - this will bring us closer to predict the revenue of an individual.
@@ -81,8 +81,32 @@ We suppose here that we associate with each individual a unique class regardless
 
 #### 2. TEST Model 1: ANOVA
 
+##### 1. PERFORMANCES
+
 ANOVA is applied in this project to verify the effect of a qualitative variable (country's name) on a quantitative variable (income). 
-There are certain assumptions that needs to be verified for ANOVA model:
+
+```python
+# ANOVA 1-way with log-income values
+model = ols('log_income ~ C(name)',data = df).fit()
+table = sm.stats.anova_lm(model,type=2)
+anova_table(table)
+```
+
+
+Using the log-income help to improve the model: Eta-squared is around 0.76 vs 0.47 for the model based on the income. It is still relatively low (we generally aim for at least 90%), probably because there are others important variables to explain the variability of incomes.
+The model sum of square is about 3 times higher than the error sum of square, which indicates that the country name is a pretty good parameter to explained and predict the income:
+
+- Variability explained by the country equals = 7.975793e+06
+
+- Variability explained by other factors not included in the model = 2.555139e+06
+
+The MSE is high for the predictor (country name) but much lower than with the previous model. The MSE for the residual is around 1, which indicates again that the model is performing better than the previous model to fit and predict the data but could be improved.
+p-value << alpha risk (5%), meaning that at least one group is different than the rest (so that the income depend on the country).
+
+✅ The variability of income can be partly explained by the country we are observing, meaning that if we are observing the income from Angola or from Denmark, we can expect the income to be different.
+
+
+**There are certain assumptions that needs to be verified for ANOVA model:**
 
 ##### 1. NORMALITY
 
@@ -147,19 +171,22 @@ df.durbin_watson(model2bis.resid, axis=0)
 
 ✅ The result suggest a positive autocorrelation in the residuals. So the condition of independance is not verified.
 
-💥 All in all, none of the conditions necessary for applying an ANOVA are verified here. So, even tough the model retrieved some relatively good performances we can not rely on it.
-Let's try to build another model based on multiple linear regression.
+💥 All in all, none of the conditions necessary for applying an ANOVA are verified here. So, even tough the model retrieved some relatively good performances we can not rely on it. Let's try to build another model based on multiple linear regression.
 
 
 #### 3. TEST Model 2: Multiple Linear Regression
+
+##### 1. PERFORMANCES
 
 In this project we have tested different combination of the explanatory variables in order to find the best model. Ultimately, the model based on the gini index, the log-average income and the parent's class, is the one providing the best performances to predict the income. It explains 81% of the variances, meaning that only 19% remains unexplained and due to others factors ike fx. chance, efforts,...
 
 <img src="images/rsz_1screenshot_2022-11-07_at_150024.png"/>
 
-Similarly to the ANOVA we must verified the conditions of normality, homogeneity and independance for the linear model to be valid. In addition, we must observed a linear relationship between the dependent variables and the independent variable and ideally the absence of multicollinearity. 
+Similarly to the ANOVA we must verified the conditions of normality, homogeneity and independance for the linear model to be valid. In addition, we must observed a linear relationship between the dependent and the independent variables and ideally, the absence of multicollinearity. 
 
-💥 We have previously established that the conditions of normality, homogeneity and independance were not respected. Let's describe further how to check the collinearity condition.
+💥 We have previously established that the conditions of normality, homogeneity and independence were not respected. Let's describe further how to check the collinearity condition.
+
+##### 2. MULTICOLLINEARITY
 
 We can check the existence of collinearity between two or more variables with the Variance Inflation Factor (VIF). It's a measure of colinearity among predictor variables within a multiple regression. A rule of thumb for interpreting the variance inflation factor:
 
@@ -181,4 +208,6 @@ vif.round(1) #inspect results
 
 ✅ The test revealed that there is no collinearity between the features of the model.
 
-➡️ All in all, the 2 models tested can not be fully trusted as they rely on non-verified conditions. Moving forward we could try to apply other types of regression models. More to discover [here](https://www.upgrad.com/blog/types-of-regression-models-in-machine-learning/#:~:text=Polynomial%20Regression%20is%20another%20one,by%20the%20n%2Dth%20degree.)
+#### 3. CONCLUSIONS
+
+All in all, the 2 models tested retrieved some good performances in terms of predictions BUT they can not be fully trusted as they rely on non-verified conditions. Moving forward we could try for example to apply other types of regression models. More to discover [here](https://www.upgrad.com/blog/types-of-regression-models-in-machine-learning/#:~:text=Polynomial%20Regression%20is%20another%20one,by%20the%20n%2Dth%20degree.)
