@@ -10,7 +10,7 @@
 [Customer Segmentation with Clustering Algorithm](https://github.com/AurelieGIRAUD/Data_Science_Projects/tree/main/Clustering)
 
 ---
-[Revenue Prediction with ANOVA](/logistic_regression)
+[Revenue Prediction with ANOVA](/anova_multiple_linear)
  <br> <br>
 <img src="images/anova.jpg"/>
 
