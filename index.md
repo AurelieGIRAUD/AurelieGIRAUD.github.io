@@ -32,7 +32,7 @@
 - [How to build a powerful business index?](https://towardsdatascience.com/how-to-build-an-index-452f5018d5aa?sk=a99d12913cbc00f8451b44f13bb6d181)
 - [Random Forest: what you need to know before starting](https://towardsdatascience.com/quick-intro-to-random-forest-3cb5006868d8?sk=9d1a49e3f5f1ad350f425344c0f5c335)
  <br> <br>
- <img src="rsz_1screenshot_2022-11-09_at_201747.png"/>
+ <img src="images/rsz_1screenshot_2022-11-09_at_201747.png"/>
 
 
 
