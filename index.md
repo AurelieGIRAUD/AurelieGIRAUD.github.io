@@ -13,7 +13,7 @@
 - **Multiple Linear Regression**: [Optimizing marketing budget based on sales revenues](/linear_regression)
  <br> <br>
  
- <img src="images/anova.jpg"/>
+ <img src="images/rsz_lastsharecollage.jpg"/>
  
 
 ---
