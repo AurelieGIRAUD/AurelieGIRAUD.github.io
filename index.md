@@ -6,26 +6,18 @@
 
 #### Regressions Models
 
-- **Logistic Regression**: [Fraud Detection](/logistic_regression)
+- **Logistic Regression**: [Fraud Detection on banknotes](/logistic_regression)
  <br> <br>
-<img src="images/anova.jpg"/>
-
-
-- **ANOVA**: [Targeting new customers based on revenue prediction](/anova_multiple_linear)
+- **ANOVA**: [Targeting new customers from a bank portfolio](/anova_multiple_linear)
  <br> <br>
-<img src="images/rsz_1rsz_1img_0272.jpg"/>
-
-
-- **Multiple Linear Regression**: [Optimize marketing budget based on sales revenues](/linear_regression)
+- **Multiple Linear Regression**: [Optimizing marketing budget based on sales revenues](/linear_regression)
  <br> <br>
-<img src="images/linear.jpg"/>
-
 
 ---
 
 #### Clustering
 
-[Customer Segmentation with Clustering Algorithm](https://github.com/AurelieGIRAUD/Data_Science_Projects/tree/main/Clustering)
+- **K-Means, SpectralClustering, AgglomerativeClustering, DBSCAN and K-Medoid:** [Customer Segmentation with Clustering Algorithm](https://github.com/AurelieGIRAUD/Data_Science_Projects/tree/main/Clustering)
 
 ---
 
