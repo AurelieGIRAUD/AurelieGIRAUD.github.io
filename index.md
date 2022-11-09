@@ -17,7 +17,7 @@
 
 #### Clustering
 
-- **K-Means, SpectralClustering, AgglomerativeClustering, DBSCAN and K-Medoid:** [Customer Segmentation with Clustering Algorithm](https://github.com/AurelieGIRAUD/Data_Science_Projects/tree/main/Clustering)
+- **K-Means, SpectralClustering, AgglomerativeClustering, DBSCAN and K-Medoid:** [Customer Segmentation based on credit card data](https://github.com/AurelieGIRAUD/Data_Science_Projects/tree/main/Clustering)
 
 ---
 
