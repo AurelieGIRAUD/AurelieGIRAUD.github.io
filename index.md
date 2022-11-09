@@ -6,12 +6,14 @@
 
 #### Regressions Models
 
-- **Logistic Regression**: [Fraud Detection on banknotes](/logistic_regression)
+- **Logistic Regression**: [Fraud detection on banknotes](/logistic_regression)
  <br> <br>
-- **ANOVA**: [Targeting new customers from a bank portfolio](/anova_multiple_linear)
+- **ANOVA**: [Targeting future customers from a bank portfolio](/anova_multiple_linear)
  <br> <br>
 - **Multiple Linear Regression**: [Optimizing marketing budget based on sales revenues](/linear_regression)
  <br> <br>
+ 
+ 
 
 ---
 
