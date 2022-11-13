@@ -54,7 +54,7 @@ The distributions are skewed which may indicate the presence of outliers. This p
 Often, machine learning modeling can be improved by understanding, handling or removing the outlier values.
 
 One method for removing the outliers when the data are following a Gaussian-like distribution, consist of using a threshold = 3 Standard Deviation. A value that falls outside of 3 standard deviations from the mean is part of the distribution, but it is an unlikely or rare event. This is a common cut-off in practice for identifying outliers in a Gaussian or Gaussian-like distribution. For smaller samples of data, perhaps a value of 2 standard deviations (95%) can be used, and for larger samples, perhaps a value of 4 standard deviations (99.9%) can be used.
-Another method if the data are not normal or not normal enough to treat it as being drawn from a Gaussian distribution, consist of using the InterQuartile Range (IQR). The IQR is calculated as the difference between the 75th and the 25th percentiles of the data and defines the box in a box and whisker plot. The IQR can be used to identify outliers by defining limits on the sample values that are a factor k of the IQR below the 25th percentile or above the 75th percentile. The common value for the factor k is the value 1.5. A factor k of 3 or more can be used to identify values that are extreme outliers or “far outs” when described in the context of box and whisker plots [source](https://machinelearningmastery.com/how-to-use-statistics-to-identify-outliers-in-data/)
+Another method if the data are not normal or not normal enough to treat it as being drawn from a Gaussian distribution, consist of using the InterQuartile Range (IQR). The IQR is calculated as the difference between the 75th and the 25th percentiles of the data and defines the box in a box and whisker plot. The IQR can be used to identify outliers by defining limits on the sample values that are a factor k of the IQR below the 25th percentile or above the 75th percentile. The common value for the factor k is the value 1.5. A factor k of 3 or more can be used to identify values that are extreme outliers or “far outs” when described in the context of box and whisker plots [source](https://machinelearningmastery.com/how-to-use-statistics-to-identify-outliers-in-data/).
 
 ```python
 # Return a dataframe containing the outliers based on the quantile method
@@ -83,8 +83,10 @@ A scree plot displays how much variance each principal components (PCs) captures
 - The selected PCs should be able to describe at least 82% of the variance.
 - Based on the scree plot, we decide to keep the first 3 components as they capture about 90% of the variance which is good.
 
-[sources 1](https://blog.bioturing.com/2018/06/18/how-to-read-pca-biplots-and-scree-plots/)
-[sources 2](https://stats.stackexchange.com/questions/223450/t-sne-versus-mds)
+[blog.bioturing.com/](https://blog.bioturing.com/2018/06/18/how-to-read-pca-biplots-and-scree-plots/)
+
+
+[stats.stackexchange](https://stats.stackexchange.com/questions/223450/t-sne-versus-mds)
 
 We need to keep the first 3 PCs to hit 90% of the variance explained on the dataset.
 
