@@ -2,7 +2,7 @@
 
 ### ✅ Business Case
 
-In this project, we attempt to create a model to detect fake banknotes using a Logistic Regression algorithm and labelled data containing the characteristics of genuine banknotes. 
+In this project, we create a model to detect fake banknotes using labelled data containing the characteristics of genuine banknotes and a Logistic Regression model.
 
 
 ### 📉 Dataset
@@ -16,7 +16,7 @@ The repository is available on [GitHub](https://github.com/AurelieGIRAUD/Data_Sc
 1. Exploratory Data Analysis (EDA)
   
   - Univariate and Bivariate Analysis. 
-  - Handling outliers
+  - Handling outliers.
   - Data Visualizations supported by MatplotLib.
   
  2. Principal Component Analysis (PCA)
