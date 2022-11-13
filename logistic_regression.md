@@ -2,7 +2,7 @@
 
 ### ✅ Business Case
 
-In this project, we create a model to detect fake banknotes using labelled data containing the characteristics of genuine banknotes and a Logistic Regression model.
+In this project, we create a model to detect fake banknotes using labelled data containing the characteristics of genuine and fake banknotes and a Logistic Regression model.
 
 
 ### 📉 Dataset
